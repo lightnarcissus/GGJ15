@@ -33,4 +33,5 @@ Thumbs.db
 
 # Owen's changes #
 .sublime*
-Assets/UnityVS/
+Assets/UnityVS/*
+*.swp
