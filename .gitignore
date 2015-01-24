@@ -30,3 +30,7 @@ ExportedObj/
 Icon?
 ehthumbs.db
 Thumbs.db
+
+# Owen's changes #
+.sublime*
+Assets/UnityVS/
