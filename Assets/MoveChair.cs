@@ -18,6 +18,16 @@ public class MoveChair : KeyTriggeredBehavior
 
     public override void PlayAction()
     {
-        gameObject.GetComponent<Animator>().enabled = true; //triggers ChairRecline movement
+        gameObject.GetComponent<Animator>().enabled = true;
+        gameObject.GetComponent<Animator>().Play("ChairRecline", 0); 
+      /*  if (!GuyRecline.reclining)
+        {
+            gameObject.GetComponent<Animator>().enabled = true; 
+            gameObject.GetComponent<Animator>().Play("ChairRecline", 0); 
+        }
+        else
+        {
+            gameObject.GetComponent<Animator>().Play("ChairChange 0", 0);
+        }*/
     }
 }
