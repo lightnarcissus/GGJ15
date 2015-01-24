@@ -84,7 +84,7 @@ GameObject:
   - 4: {fileID: 85414330}
   - 212: {fileID: 85414329}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -188,6 +188,7 @@ GameObject:
   - 124: {fileID: 729165844}
   - 81: {fileID: 729165843}
   - 82: {fileID: 729165848}
+  - 95: {fileID: 729165849}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -264,11 +265,11 @@ AudioSource:
   m_GameObject: {fileID: 729165842}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: c6b6aca36b37f2a4abcba316af79a7bd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9ff8d48cb9066464ea329e3c17940c14, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Priority: 128
   DopplerLevel: 1
@@ -314,6 +315,20 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!95 &729165849
+Animator:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 729165842}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 57628fc89d6f9074683e402e590eb6ad, type: 2}
+  m_CullingMode: 0
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
+  m_HasTransformHierarchy: 1
 --- !u!1 &1432513592
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,8 +400,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 1452806065}
   - 212: {fileID: 1452806064}
+  - 95: {fileID: 1452806066}
+  - 114: {fileID: 1452806067}
+  - 114: {fileID: 1452806068}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: Guy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -422,10 +440,48 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1452806063}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.08034897, y: 2.01445818, z: 1.7184}
+  m_LocalPosition: {x: 4.33577633, y: 1.75903034, z: 1.7184}
   m_LocalScale: {x: 2.84665799, y: 2.84665799, z: 2.84665799}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!95 &1452806066
+Animator:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1452806063}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8469e5dc2a71fd448b0483837023b38f, type: 2}
+  m_CullingMode: 0
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
+  m_HasTransformHierarchy: 1
+--- !u!114 &1452806067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1452806063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0398d2be4910a4c2792d2c24ae174133, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _triggerKeyCode: 0
+--- !u!114 &1452806068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1452806063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00798607aef64664dbe79440287e9494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _triggerKeyCode: 32
 --- !u!1 &1864774200
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,8 +491,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 1864774202}
   - 212: {fileID: 1864774201}
+  - 95: {fileID: 1864774203}
+  - 114: {fileID: 1864774205}
+  - 114: {fileID: 1864774204}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: Chair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -476,3 +535,41 @@ Transform:
   m_LocalScale: {x: 2.80133867, y: 2.80133867, z: 2.80133867}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!95 &1864774203
+Animator:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1864774200}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d55dab4de0b4f9743b44532cf133ed78, type: 2}
+  m_CullingMode: 0
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
+  m_HasTransformHierarchy: 1
+--- !u!114 &1864774204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1864774200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6f0bd21074719a4b91feaa62cbcab72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _triggerKeyCode: 32
+--- !u!114 &1864774205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1864774200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0398d2be4910a4c2792d2c24ae174133, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _triggerKeyCode: 32
