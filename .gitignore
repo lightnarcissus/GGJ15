@@ -32,6 +32,6 @@ ehthumbs.db
 Thumbs.db
 
 # Owen's changes #
-.sublime*
+*.sublime*
 Assets/UnityVS/*
 *.swp
