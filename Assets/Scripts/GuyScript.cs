@@ -21,6 +21,7 @@ public class GuyScript : MonoBehaviour {
 	public Steward _steward;
 	public StewardSign _sign;
 	public AudioSource _slapAudio;
+	public AudioSource _skymallAudio;
 
 	private Animator _animator;
 	private AnimationState _animState;
@@ -86,9 +87,9 @@ public class GuyScript : MonoBehaviour {
 		if (Input.GetKeyDown(_readKey)) {
 			_animator.SetTrigger("Read");
 			_animState = AnimationState.Read;
-			// _slapAudio.Play();
+			_skymallAudio.Play();
 		} else if (Input.GetKeyUp(_readKey)) {
-			// _slapAudio.Stop();
+			_skymallAudio.Stop();
 			if (_animState == AnimationState.Read) {
 				_animator.SetTrigger("Idle");
 				_animState = AnimationState.Idle;

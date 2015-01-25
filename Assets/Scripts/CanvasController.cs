@@ -21,8 +21,9 @@ public class CanvasController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		_display = CurrentDisplay.plane;	
-		_introPanel.active = true;
+		// _display = CurrentDisplay.plane;	
+		// _introPanel.active = true;
+		DisplayCaptain();
 	}
 	
 	// Update is called once per frame
@@ -31,6 +32,12 @@ public class CanvasController : MonoBehaviour {
 			_introPanel.active = false;
 			ReturnToPlane(CurrentDisplay.plane);
 		}	
+	}
+
+	public void DisplayCaptain() {
+		_introPanel.active = true;
+		_display = CurrentDisplay.plane;
+		GetComponent<AudioSource>().Play();
 	}
 
 	public void DisplayPhone() {
