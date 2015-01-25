@@ -4,6 +4,7 @@ using System.Collections;
 public class LookWatch : KeyTriggeredBehavior
 {
 
+    public CanvasController _ui;
     // // Use this for initialization
     // public override void Start()
     // {
@@ -17,11 +18,13 @@ public class LookWatch : KeyTriggeredBehavior
 
     public override void PlayAction() {
         _animator.SetTrigger("show");
+        _ui.DisplayWatch();
         base.PlayAction();
     }
 
     public override void PlayUpAction() {
         _animator.SetTrigger("hide");
+        _ui.ReturnToPlane(CurrentDisplay.watch);
         base.PlayUpAction();
     }
 }

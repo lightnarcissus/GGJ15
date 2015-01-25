@@ -6,7 +6,8 @@ public enum AnimationState {
 	Punch,
 	Blow,
 	CallSteward,
-	Slap
+	Slap,
+	Read
 };
 
 public class GuyScript : MonoBehaviour {
@@ -15,6 +16,7 @@ public class GuyScript : MonoBehaviour {
 	public KeyCode _punchKey;
 	public KeyCode _callStewardKey;
 	public KeyCode _slapKey;
+	public KeyCode _readKey;
 
 	public Steward _steward;
 	public StewardSign _sign;
@@ -76,6 +78,18 @@ public class GuyScript : MonoBehaviour {
 		} else if (Input.GetKeyUp(_slapKey)) {
 			_slapAudio.Stop();
 			if (_animState == AnimationState.Slap) {
+				_animator.SetTrigger("Idle");
+				_animState = AnimationState.Idle;
+			}
+		}
+
+		if (Input.GetKeyDown(_readKey)) {
+			_animator.SetTrigger("Read");
+			_animState = AnimationState.Read;
+			// _slapAudio.Play();
+		} else if (Input.GetKeyUp(_readKey)) {
+			// _slapAudio.Stop();
+			if (_animState == AnimationState.Read) {
 				_animator.SetTrigger("Idle");
 				_animState = AnimationState.Idle;
 			}
