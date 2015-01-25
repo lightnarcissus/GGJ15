@@ -18,6 +18,7 @@ public class GuyScript : MonoBehaviour {
 
 	public Steward _steward;
 	public StewardSign _sign;
+	public AudioSource _slapAudio;
 
 	private Animator _animator;
 	private AnimationState _animState;
@@ -63,6 +64,18 @@ public class GuyScript : MonoBehaviour {
 		} else if (Input.GetKeyUp(_callStewardKey)) {
 			_sign.Hide();
 			if (_animState == AnimationState.CallSteward) {
+				_animator.SetTrigger("Idle");
+				_animState = AnimationState.Idle;
+			}
+		}
+
+		if (Input.GetKeyDown(_slapKey)) {
+			_animator.SetTrigger("Slap");
+			_animState = AnimationState.Slap;
+			_slapAudio.Play();
+		} else if (Input.GetKeyUp(_slapKey)) {
+			_slapAudio.Stop();
+			if (_animState == AnimationState.Slap) {
 				_animator.SetTrigger("Idle");
 				_animState = AnimationState.Idle;
 			}
