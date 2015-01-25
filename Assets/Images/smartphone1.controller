@@ -5,13 +5,13 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Watch
+  m_Name: smartphone1
   serializedVersion: 2
   m_AnimatorParameters: []
   m_AnimatorLayers:
   - serializedVersion: 3
     m_Name: Base Layer
-    m_StateMachine: {fileID: 110700000}
+    m_StateMachine: {fileID: 110753210}
     m_Mask: {fileID: 0}
     m_BlendingMode: 0
     m_SyncedLayerIndex: -1
@@ -20,72 +20,50 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!1101 &110100000
-Transition:
-  m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_SrcState: {fileID: 110200000}
-  m_DstState: {fileID: 110236268}
-  m_TransitionDuration: .25
-  m_TransitionOffset: 0
-  m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
-    m_EventTreshold: 0
-    m_ExitTime: .75
-  m_Atomic: 1
-  m_Solo: 0
-  m_Mute: 0
---- !u!1102 &110200000
+--- !u!1102 &110225428
 State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: YesWatch
+  m_Name: hidePhone
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: 125bc08942d00604783b47542b619b2b, type: 2}
-  m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: 168, y: 60, z: 0}
+  - {fileID: 7400000, guid: 951e837d6ed9e47c1a0650f0d16fea7b, type: 2}
+  m_ParentStateMachine: {fileID: 110753210}
+  m_Position: {x: 85, y: 115, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
---- !u!1102 &110236268
+--- !u!1102 &110253210
 State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: NoWatch
+  m_Name: showPhone
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: f149a74609533614abf02d26ec5b01b0, type: 2}
-  m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: 72, y: 120, z: 0}
+  - {fileID: 7400000, guid: 01b51c224fdb244a6a4f26598eda607c, type: 2}
+  m_ParentStateMachine: {fileID: 110753210}
+  m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
---- !u!1107 &110700000
+--- !u!1107 &110753210
 StateMachine:
   serializedVersion: 2
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Base Layer
-  m_DefaultState: {fileID: 110236268}
+  m_DefaultState: {fileID: 110253210}
   m_States:
-  - {fileID: 110200000}
-  - {fileID: 110236268}
+  - {fileID: 110253210}
+  - {fileID: 110225428}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
-  m_OrderedTransitions:
-    data:
-      first: {fileID: 110200000}
-      second:
-      - {fileID: 110100000}
+  m_OrderedTransitions: {}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
